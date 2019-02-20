@@ -5,47 +5,47 @@
   <body>
   
   <div class="limiter">
-		<div class="container-login100">
-			<div class="wrap-login100">
+		<div class="container-login">
+			<div class="wrap-login">
 				
 
-				<form class="login100-form validate-form" th:action="@{/calc}" th:object="${calculation}" method="post">
-					<span class="login100-form-title">
-						Вычеслитель квадратных уравнений вида 
+				<form class="login-form validate-form" th:action="@{/calc}" th:object="${calculation}" method="post">
+					<span class="login-form-title">
+						Calculator of square equations like: 
 					</span>
-					<span class="login100-form-title">
+					<span class="login-form-title">
 						ax^2 + bx + c = 0
 					</span>
-					<span class="login100-form-title">
-						Укажите значения для рассчета!
+					<span class="login-form-title">
+						Specify the values to calculate!
 					</span>
 
-					<div class="wrap-input100 validate-input" data-validate = "Укажите верное значение">
-						<input class="input100" type="text" th:field="*{avalue}" placeholder="a">
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
+					<div class="wrap-input validate-input" data-validate = "Please enter a valid value!">
+						<input class="input" type="text" th:field="*{avalue}" placeholder="a">
+						<span class="focus-input"></span>
+						<span class="symbol-input">
 							a
 						</span>
 					</div>
 
-					<div class="wrap-input100 validate-input" data-validate = "Укажите верное значение">
-						<input class="input100" type="text" th:field="*{bvalue}"  placeholder="b">
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
+					<div class="wrap-input validate-input" data-validate = "Please enter a valid value!">
+						<input class="input" type="text" th:field="*{bvalue}"  placeholder="b">
+						<span class="focus-input"></span>
+						<span class="symbol-input">
 							b
 						</span>
 					</div>
 					
-					<div class="wrap-input100 validate-input" data-validate = "Укажите верное значение">
-						<input class="input100" type="text" th:field="*{cvalue}"  placeholder="b">
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
+					<div class="wrap-input validate-input" data-validate = "Please enter a valid value!">
+						<input class="input" type="text" th:field="*{cvalue}"  placeholder="b">
+						<span class="focus-input"></span>
+						<span class="symbol-input">
 							с
 						</span>
 					</div>
 					
-					<div class="container-login100-form-btn">
-						<input type="submit" value="Рассчитать" class="login100-form-btn"/>
+					<div class="container-login-form-btn">
+						<input type="submit" value="Calculate" class="login-form-btn"/>
 					</div>
 
 				</form>

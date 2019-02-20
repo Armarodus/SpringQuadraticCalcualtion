@@ -4,33 +4,32 @@
 </head>
 <body>
 
-	<
 	<div class="limiter">
-		<div class="container-login100">
-			<div class="wrap-login100">
+		<div class="container-login">
+			<div class="wrap-login">
 
 
-				<form class="login100-form validate-form" th:action="@{/calc}"
+				<form class="login-form validate-form" th:action="@{/calc}"
 					th:object="${calculation}" method="post">
-					<span class="login100-form-title"> Вычеслитель квадратных
-						уравнений вида </span> <span class="login100-form-title"> ax^2 +
-						bx + c = 0 </span> <span class="login100-form-title"> Результат: </span>
+					<span class="login-form-title"> Calculator of square equations like: </span>
+					<span class="login-form-title"> ax^2 +bx + c = 0 </span> 
+					<span class="login-form-title"> Result is: </span>
 
-					A<input class="input100" type="text" th:value="${calc.avalue}">
-					B<input class="input100" type="text" th:value="${calc.bvalue}">
-					C<input class="input100" type="text" th:value="${calc.cvalue}">
+					A<input class="input" type="text" th:value="${calc.avalue}">
+					B<input class="input" type="text" th:value="${calc.bvalue}">
+					C<input class="input" type="text" th:value="${calc.cvalue}">
 
 					<div th:if="${not #lists.isEmpty(calc.root)}">
 						<div th:each="value: ${calc.root}">
-							X<input class="input100" type="text" th:value="${value}">
+							X<input class="input" type="text" th:value="${value}">
 						</div>
 					</div>
 					<div th:if="${#lists.isEmpty(calc.root)}">
-						<span class="login100-form-title"> Ошибка, дискриминант меньше нуля! </span>
+						<span class="login-form-title"> Error, discriminant is less than zero! </span>
 					</div>
 
-					<div class="container-login100-form-btn">
-						<a href="/" class="login100-form-btn">На главную</a>
+					<div class="container-login-form-btn">
+						<a href="/" class="login-form-btn">Back to previous page</a>
 					</div>
 
 				</form>
