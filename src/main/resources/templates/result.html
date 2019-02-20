@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/template :: head">
+</head>
+<body>
+
+	<
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+
+
+				<form class="login100-form validate-form" th:action="@{/calc}"
+					th:object="${calculation}" method="post">
+					<span class="login100-form-title"> Вычеслитель квадратных
+						уравнений вида </span> <span class="login100-form-title"> ax^2 +
+						bx + c = 0 </span> <span class="login100-form-title"> Результат: </span>
+
+					A<input class="input100" type="text" th:value="${calc.avalue}">
+					B<input class="input100" type="text" th:value="${calc.bvalue}">
+					C<input class="input100" type="text" th:value="${calc.cvalue}">
+
+					<div th:if="${not #lists.isEmpty(calc.root)}">
+						<div th:each="value: ${calc.root}">
+							X<input class="input100" type="text" th:value="${value}">
+						</div>
+					</div>
+					<div th:if="${#lists.isEmpty(calc.root)}">
+						<span class="login100-form-title"> Ошибка, дискриминант меньше нуля! </span>
+					</div>
+
+					<div class="container-login100-form-btn">
+						<a href="/" class="login100-form-btn">На главную</a>
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+	<div th:replace="fragments/template :: footer"></div>
+</body>
+</html>
