@@ -15,9 +15,9 @@
 					<span class="login-form-title"> ax^2 +bx + c = 0 </span> 
 					<span class="login-form-title"> Result is: </span>
 
-					A<input class="input" type="text" th:value="${calc.avalue}">
-					B<input class="input" type="text" th:value="${calc.bvalue}">
-					C<input class="input" type="text" th:value="${calc.cvalue}">
+					A<input class="input" type="number" step="0.01" th:value="${calc.avalue}">
+					B<input class="input" type="number" step="0.01"th:value="${calc.bvalue}">
+					C<input class="input" type="number" step="0.01" th:value="${calc.cvalue}">
 
 					<div th:if="${not #lists.isEmpty(calc.root)}">
 						<div th:each="value: ${calc.root}">
